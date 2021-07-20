@@ -1,0 +1,127 @@
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+  <div style="margin-left: 20%;">
+    
+  <div id="header">
+    <h1> Welcome to Customer Portal</h1>
+    <p  class="text"style="font-size: 17px;color:black;">Customer portal is designed for maintaining the data of all the
+       customers carrying out business with the organization.
+    </p>
+    
+    
+  </div>
+  
+    
+    <div class="row">
+      <div class="block">
+        <a routerLink="/customerdetail" >
+        <i class="fa fa-user fa-2x" style="padding-left: 70px;font-size: 460%;"></i></a>
+        <h3  style="padding-left: 70px; font-size: large;">Profile</h3>
+      </div>
+      <a routerLink="/customeredit">
+      <div class="block"><i class="fa fa-edit" style="padding-left: 130px;font-size: 460%;"></i>
+        <h3 style="padding-left: 140px; font-size: large;">Edit</h3></div>
+        </a>
+        <a routerLink="/inquiry">
+      <div class="block"><i class="fa fa-file-text" style="padding-left: 215px;font-size: 390%;"></i>
+        <h3 style="padding-left: 215px; font-size: large;margin-top: 4px;">Inquiry</h3></div>
+      </a>
+      <a routerLink="/salesorder">
+        <div class="block"><i class="fa fa-clipboard" style="padding-left: 303px;font-size: 400%;"></i>
+          <h3 style="padding-left: 297px; font-size: large;margin-top: 4px;white-space: nowrap">Sales Order</h3></div>
+        </a>
+        <a routerLink="/delivery">
+          <div class="block"><i class="fa fa-truck" style="padding-left: 407px;font-size: 400%;"></i>
+            <h3 style="padding-left: 392px; font-size: large;white-space: nowrap">List Of Delivery</h3></div>
+          </a>
+  </div>
+  <div class="rowii">
+    <a routerLink="/invoice">
+      <div class="block">
+        <i class="fa fa-file" style="padding-left: 70px;font-size: 400%;"></i>
+        <h3 style="padding-left: 70px; font-size: large;margin-top: 4px;">Invoice</h3>
+      </div>
+    </a>
+     <a routerLink="/getpayment">
+      <div class="block"><i class="fa fa-money" style="padding-left: 130px;font-size: 400%;"></i>
+        <h3 style="padding-left: 120px; font-size: large;white-space: nowrap">Financial Sheet</h3></div>
+      </a>
+      <a routerLink="/creditdebit">
+        <div class="block"><i class="fa fa-credit-card" style="padding-left: 215px;font-size: 400%;"></i>
+        <h3 style="padding-left: 210px; font-size: large;">Credit/Debit</h3></div>
+      </a>
+      <a routerLink="/overallsales">
+        <div class="block"><i class="fa fa-bar-chart" style="padding-left: 303px;font-size: 400%;"></i>
+          <h3 style="padding-left: 295px; font-size: large;white-space: nowrap">Overall Sales</h3></div>
+        </a>
+        <a routerLink="/masterdata">
+          <div class="block"><i class="fa fa-upload fa-2x" style="padding-left: 407px;font-size: 400%;"></i>
+            <h3 style="padding-left: 382px; font-size: large;white-space: nowrap">Master Data Upload</h3></div>
+          </a>
+  </div>
+  </div>
+  <nav class="mainmenu">
+    <div class="sidebar-logo">
+      CUSTOMER PORTAL
+      </div>
+    <ul>
+      <li class="dropdown"  ><a><i class="fa fa-users fa-2x" style="padding-right: 10px;"></i>Profile <span>&rsaquo;</span></a>
+      <ul>
+        <li><a routerLink="/customerdetail">View</a></li>
+        <li><a routerLink="/customeredit">Edit</a></li>
+      </ul>
+      </li>
+      <li class="dropdown"><a href="#"> <i class="fa fa-laptop fa-2x" style="padding-right: 10px;"></i>Dashboard <span>&rsaquo;</span></a>
+         <ul>
+            <li><a routerLink="/inquiry">Inquiry data</a></li>
+            <li><a routerLink="/salesorder">Sales order data</a></li>
+            <li><a routerLink="/delivery">List of Delivery</a></li>
+          </ul>
+      </li>
+      <li class="dropdown"><a href="#"><i class="fa fa-bar-chart-o fa-2x" style="padding-right: 10px;"></i> Finanicial sheet <span>&rsaquo;</span></a>
+         <ul>
+         <li><a routerLink="/invoice">Invoice details</a></li>
+         <li><a routerLink="/getpayment">Payments and aging</a></li>
+         <li><a routerLink="/creditdebit">Credit/Debit memo</a></li>
+         <li><a routerLink="/overallsales">Overall sales data</a></li>
+         </ul>
+      </li>
+      <li><a routerLink="/masterdata"> <i class="fa fa-upload fa-2x" style="padding-right: 10px;"></i>Master Data Upload</a></li>
+
+      
+    </ul>
+
+  </nav>
+  <nav >
+  <ul>
+   
+     <a href="#" class="logout">
+       <div style="display: flex;">
+         <div style="margin-top: 5px; padding-right: 10px;"><i class="fa fa-power-off fa-2x"></i></div>
+         <div> Logout</div>
+       </div>
+           
+     </a>
+
+   
+ </ul>
+</nav>
+
+</body>
+</html>
+
+ 
+
+
+
+
+
+
+
+
+

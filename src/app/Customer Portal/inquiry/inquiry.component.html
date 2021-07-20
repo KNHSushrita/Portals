@@ -1,0 +1,93 @@
+
+
+
+<html>
+    <body>
+
+        <div style="margin-left: 20%;margin-right: 5%;margin-top:4%;">        
+            <div *ngIf="inquiry" >
+            <h2 style="text-align: center;">Inquiry Details</h2>
+            <table datatable class="row-border hover" id="example" style="padding: 30px;">
+              <thead style="background-color: #b2b9c4;">
+                <tr>
+        
+                  <th>Document number</th>
+                  <th>Item Number</th>
+                  <th>Material</th>
+                  <th >Short text </th>
+                  <th>Currency</th>
+                  <th>Create Date</th>
+                  <th>Net Price</th>
+                  <!-- <th >Delivery Type</th> -->
+                  <!-- <th>Sales Org</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let chs of inquiry" style="background-color: #e2e2e2;text-align: center;">
+                  <td>{{+chs.DOC_NUMBER._text}}</td>
+                  <td>{{chs.ITEM_NUMBER._text}}</td>
+                  <td>{{chs.MATERIAL._text}}</td>
+                  <td>{{chs.SHORT_TEXT._text}}</td>
+                  <td>{{+chs.CURRENCY._text}}</td>
+                  <td>{{+chs.CREATE_DATE._text}}</td>
+                  <td>{{chs.NET_PRICE._text}}</td>
+                  <!-- <td>{{chs.LFART._text}}</td> -->
+                  <!-- <td>{{chs.VKORG._text}}</td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            
+        </div>
+        <nav class="mainmenu">
+            <div class="sidebar-logo">
+              CUSTOMER PORTAL
+              </div>
+            <ul>
+              <li class="dropdown" ><a href="#"><i class="fa fa-users fa-2x" style="padding-right: 10px;"></i>Profile <span>&rsaquo;</span></a>
+              <ul>
+                <li><a href="#">View</a></li>
+                <li><a href="#">Edit</a></li>
+              </ul>
+              </li>
+              <li class="dropdown"><a href="#"> <i class="fa fa-laptop fa-2x" style="padding-right: 10px;"></i>Dashboard <span>&rsaquo;</span></a>
+                 <ul>
+                    <li><a href="#">Inquiry data</a></li>
+                    <li><a href="#">Sales order data</a></li>
+                    <li><a href="#">List of Delivery</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a href="#"><i class="fa fa-bar-chart-o fa-2x" style="padding-right: 10px;"></i> Finanicial sheet <span>&rsaquo;</span></a>
+                 <ul>
+                 <li><a href="#">Invoice details</a></li>
+                 <li><a href="#">Payments and aging</a></li>
+                 <li><a href="#">Credit/Debit memo</a></li>
+                 <li><a href="#">Overall sales data</a></li>
+                 </ul>
+              </li>
+              <li><a href="#"> <i class="fa fa-upload fa-2x" style="padding-right: 10px;"></i>Master Data Upload</a></li>
+        
+              
+            </ul>
+        
+          </nav>
+          <nav >
+          <ul>
+           
+             <a href="#" class="logout">
+               <div style="display: flex;">
+                 <div style="margin-top: 5px; padding-right: 10px;"><i class="fa fa-power-off fa-2x"></i></div>
+                 <div> Logout</div>
+               </div>
+                   
+             </a>
+        
+           
+         </ul>
+        </nav>
+    </body>
+    
+    </html>
+    
+    
+    
