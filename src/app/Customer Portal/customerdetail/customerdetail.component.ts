@@ -21,7 +21,7 @@ export class CustomerdetailComponent implements OnInit {
 
   constructor(private http: HttpClient, private router: Router) {
     this.uname = sessionStorage.getItem('uname');
-    alert(this.uname);
+    //alert(this.uname);
     if (this.uname == null) {
       // alert('hello');
       this.router.navigate(['']);
@@ -53,7 +53,7 @@ export class CustomerdetailComponent implements OnInit {
       sessionStorage.setItem("country", this.country);
     })
 
-    console.log(this.fname);
+    // console.log(this.fname);
   }  
 
 

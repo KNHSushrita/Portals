@@ -14,7 +14,7 @@ export class DeliverygetComponent implements OnInit {
 
   constructor(private http: HttpClient, private router: Router) {
     this.uname = sessionStorage.getItem('uname');
-    alert(this.uname);
+    //alert(this.uname);
     if (this.uname == null) {
       // alert('hello');
       this.router.navigate(['']);

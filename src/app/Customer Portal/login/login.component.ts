@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -33,12 +34,24 @@ export class LoginComponent implements OnInit {
         console.log(this.uname);
         sessionStorage.setItem('uname',this.uname);
       
-        alert("Welcome " + this.name);
+        // alert("Welcome " + this.name);
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Success',
+          // text: 'Enter Correct Credentials',
+          
+        })
         this.router.navigate(['/dashboard']);
         
       } 
       else{
-        alert("Invalid User");
+        // alert("Invalid User");
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Failed',
+          text: 'Enter Correct Credentials',
+          
+        })
         
     
       }
