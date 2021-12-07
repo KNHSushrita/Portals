@@ -29,7 +29,7 @@ export class DebitmemoComponent implements OnInit {
      
      this.http.post('http://localhost:3000/debitmemo', { uname: this.uname }).subscribe((data:any) => {
        console.log(data);
-       this.debit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_VENDOR_DEBIT_MEMO_KNH.Response']['IT_DEBITMEMO']['item'];
+       this.debit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_VENDOR_DEBIT_MEMO_KNH.Response']['IT_DEBITMEMO']['item'].slice(1);
        
        
      })

@@ -28,7 +28,7 @@ export class DeliverygetComponent implements OnInit {
     
     this.http.post('http://localhost:3000/delivery', { uname: this.uname }).subscribe((data:any) => {
       console.log(data);
-      this.delivery_list = data['SOAP:Envelope']['SOAP:Body']['ns0:ZSD_DELIVERYGETLIST_KNH.Response']['IT_DELIVERY_LIST']['item'];
+      this.delivery_list = data['SOAP:Envelope']['SOAP:Body']['ns0:ZSD_DELIVERYGETLIST_KNH.Response']['IT_DELIVERY_LIST']['item'].slice(1);
       console.log(this.delivery_list);
       
     })

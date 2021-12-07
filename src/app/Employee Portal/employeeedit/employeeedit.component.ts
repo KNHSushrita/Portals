@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./employeeedit.component.css']
 })
 export class EmployeeeditComponent implements OnInit {
+  uname:any;
   fname:any;
   lname:any;
   city:any;
@@ -16,32 +17,49 @@ export class EmployeeeditComponent implements OnInit {
   pincode:any;
   street:any;
   mobile:any;
-  uname:any;
-
+  // uname:any;
+  a:any;
+  b:any;
+  c:any;
+  d:any;
+  e:any;
+  f:any;
+  g:any;
+  h:any;
 
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.fname = sessionStorage.getItem("fname");
-    this.lname = sessionStorage.getItem("lname");
+    this.uname = sessionStorage.getItem("uname");
     this.city = sessionStorage.getItem("city");
     this.street = sessionStorage.getItem("street");
     this.state = sessionStorage.getItem("state");
     this.pincode = sessionStorage.getItem("pincode");
     this.mobile = sessionStorage.getItem("mobile");
     this.country = sessionStorage.getItem("country");
+    
+    this.a=this.fname;
+    // this.b=this.lname;
+    this.c=this.street;
+    this.d=this.city;
+    this.e=this.state;
+    this.f=this.pincode;
+    this.g=this.country;
+    this.h=this.mobile;
+    console.log(this.b);
   }
 
   update() {
     this.uname = sessionStorage.getItem('uname');
     var emp = {
-      uname: this.uname, fname: this.fname, lname: this.lname,
+      uname: this.uname, fname: this.fname,
       street: this.street, city: this.city, state: this.state,
       pincode: this.pincode, country: this.country, mobile: this.mobile
     }
     this.http.post('http://localhost:3000/empedit',emp).subscribe((data:any) => {
       this.fname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].VORNA._text;
-      this.lname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].NACHN._text;
+      // this.uname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].._text;
       this.city = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].ORT01._text;
       this.country = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].NATIO._text;
       this.state = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].LAND._text;
@@ -50,6 +68,16 @@ export class EmployeeeditComponent implements OnInit {
       this.pincode = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE_EDIT.Response'].PSTLZ._text;
       //  console.log(this.lname);
     })
+    console.log(this.b);
+    // console.log(this.lname);
+    if(this.a==this.fname&&this.c==this.street&&this.d==this.city&&this.e==this.state
+      &&this.f==this.pincode&&this.g==this.country&&this.h==this.mobile){
+        alert("No Changes made"); 
+      }
+    else{
+      
+      alert("Changes saved successfully");
+    }
     this.router.navigate(['/eprofile']);
   }
 

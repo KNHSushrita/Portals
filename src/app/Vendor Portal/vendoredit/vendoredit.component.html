@@ -8,6 +8,16 @@
        
         <div class="row" style="margin-top: 40px">
           <div style="margin-right: 0;">
+        
+            
+          <div class="col">
+            <div class="form-group">
+              <label >Vendor Id
+              <input readonly type="text" [(ngModel)]="uname" style="margin-left: 20px;margin-top: 5px;">
+            </label>
+            </div>
+          </div>
+             
           <div class="col">
             <div class="form-group">
               
@@ -27,24 +37,14 @@
           </div>
       
         
-      
           <div class="col">
             <div class="form-group">
-              <label>Address
-              <input type="text" [(ngModel)]="address" style="margin-left: 30px;margin-top: 5px;">
-              </label>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="form-group">
-              <label >City
-              <input type="text" [(ngModel)]="city" style="margin-left: 69px;margin-top: 5px;">
+              <label>Phone
+              <input type="text" [(ngModel)]="telephone" style="margin-left: 48px;margin-top: 5px;">
             </label>
             </div>
           </div>
-
-
+      
         </div>
         <div>
           <div class="col">
@@ -54,7 +54,17 @@
             </label>
             </div>
           </div>
-          
+      
+          <div class="col">
+            <div class="form-group">
+              <label>Address
+              <input type="text" [(ngModel)]="address" style="margin-left: 30px;margin-top: 5px;">
+              </label>
+            </div>
+          </div>
+
+
+    
           <div class="col">
             <div class="form-group">
               <label>Pincode
@@ -72,13 +82,6 @@
           </div>
 
           
-          <div class="col">
-            <div class="form-group">
-              <label>Telephone
-              <input type="text" [(ngModel)]="telephone" style="margin-left: 20px;margin-top: 5px;">
-            </label>
-            </div>
-          </div>
         </div>
           <div class="col">
             <button class="submit" (click)="update()">Submit</button>

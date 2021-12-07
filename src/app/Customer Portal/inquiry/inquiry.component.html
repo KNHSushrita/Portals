@@ -12,7 +12,7 @@
     
                 <th>Document number</th>
                 <th>Item Number</th>
-                <!-- <th>Material</th> -->
+                <th>Material</th>
                 <th>Short text </th>
                 <th>Currency</th>
                 <th>Create Date</th>
@@ -23,7 +23,7 @@
               <tr *ngFor="let knhs of inquiry" style="background-color: white;text-align: center;">
                 <td>{{+knhs.DOC_NUMBER._text}}</td>
                 <td>{{+knhs.ITEM_NUMBER._text}}</td>
-                <!-- <td>{{+knhs.MATERIAL._text}}</td> -->
+                <td>{{+knhs.MATERIAL._text}}</td>
                 <td>{{knhs.SHORT_TEXT._text}}</td>
                 <td>{{knhs.CURRENCY._text}}</td>
                 <td>{{knhs.CREATE_DATE._text}}</td>

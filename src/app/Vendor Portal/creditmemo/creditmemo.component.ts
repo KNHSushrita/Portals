@@ -30,7 +30,7 @@ export class CreditmemoComponent implements OnInit {
      
      this.http.post('http://localhost:3000/creditmemo', { uname: this.uname }).subscribe((data:any) => {
        console.log(data);
-       this.credit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_VENDOR_CREDIT_MEMO_KNH.Response']['IT_CREDITMEMO']['item'];
+       this.credit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_VENDOR_CREDIT_MEMO_KNH.Response']['IT_CREDITMEMO']['item'].slice(1);
        
        
      })

@@ -14,7 +14,7 @@
                       <th>Document No</th>
                       <th>Vendor Name</th>
                       <th>Created By</th>
-                      <!-- <th >Group</th> -->
+                      <th >Created On</th>
                       <th>Quotation Deadline</th>
                       <!-- <th>Created By</th> -->
                       <!-- <th>Interval</th> -->
@@ -32,7 +32,7 @@
                       <!-- <td>{{knhs.VEND_NAME._text}}</td> -->
                       <td>{{knhs.CREATED_BY._text}}</td>
                       <!-- <td>{{knhs.UPDATE_GRP._text}}</td> -->
-                      <!-- <td>{{knhs.CREATED_ON._text}}</td> -->
+                      <td>{{knhs.CREATED_ON._text}}</td>
                       <td>{{knhs.QUOT_DEAD._text}}</td>
                       <!-- <td>{{knhs.ITEM_INTVL._text}}</td> -->
                       <!-- <td>{{knhs.LAST_ITEM._text}}</td> -->
@@ -52,8 +52,9 @@
                   <thead style="background-color: rgb(5, 184, 255);" > 
                     <tr>
                       <th>Document No</th>
+                      <th>Item Number</th>
                       <th>Short Text</th>
-                      <th>Material</th>
+                      <!-- <th>Material</th> -->
                       <th >Target Quantity</th>
                       <th>Quotation Deadline</th>
                       <!-- <th>Created By</th> -->
@@ -68,15 +69,16 @@
                   <tbody>
                     <tr *ngFor="let knhs of filtereddata" style="background-color: white;text-align: center;">
                       <td>{{+knhs.DOC_NUMBER._text}}</td>
+                      <td>{{+knhs.DOC_ITEM._text}}</td>
                       <td>{{knhs.SHORT_TEXT._text}}</td>
-                      <td>{{+knhs.MATERIAL._text}}</td>
+                      <!-- <td>{{+knhs.MATERIAL._text}}</td> -->
                       
                       <td>{{knhs.TARGET_QTY._text}}</td>
                       <!-- <td>{{knhs.QUANTITY._text}}</td> -->
                       <td>{{knhs.QUOT_DEAD._text}}</td>
                       
                       <!-- <td>{{knhs.ITEM_INTVL._text}}</td> -->
-                      <!-- <td>{{knhs.LAST_ITEM._text}}</td> -->
+                      
                       <!-- <td>{{knhs.LANGUAGE._text}}</td> -->
                       <!-- <td>{{knhs.EXCH_RATE._text}}</td> -->
                       <!-- <td>{{knhs.WARRANTY._text}}</td> -->

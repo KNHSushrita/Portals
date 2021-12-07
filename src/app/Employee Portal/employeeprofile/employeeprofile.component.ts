@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class EmployeeprofileComponent implements OnInit {
   fname:any;
-  lname:any;
+  // lname:any;
   city:any;
   country:any;
   state:any;
@@ -34,7 +34,7 @@ export class EmployeeprofileComponent implements OnInit {
 
     this.http.post('http://localhost:3000/eprofile', { uname: this.uname }).subscribe((data:any) => {
       this.fname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE.Response']['PERSONAL_DATA'].VORNA._text;
-      this.lname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE.Response']['PERSONAL_DATA'].NACHN._text;
+      // this.lname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE.Response']['PERSONAL_DATA'].NACHN._text;
       this.city = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE.Response']['PERSONAL_DATA'].ORT01._text;
       this.country = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE.Response']['PERSONAL_DATA'].NATIO._text;
       this.state = data['SOAP:Envelope']['SOAP:Body']['ns0:ZEMP_PROFILE.Response']['PERSONAL_DATA'].LAND._text;
@@ -44,7 +44,7 @@ export class EmployeeprofileComponent implements OnInit {
 
 
       sessionStorage.setItem("fname", this.fname);
-      sessionStorage.setItem("lname", this.lname);
+      // sessionStorage.setItem("lname", this.lname);
       sessionStorage.setItem("city", this.city);
       sessionStorage.setItem("street", this.street);
       sessionStorage.setItem("state", this.state);

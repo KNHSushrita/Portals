@@ -18,6 +18,14 @@ export class VendoreditComponent implements OnInit {
   pincode:any;
   telephone:any;
   uname:any;
+  a:any;
+  b:any;
+  c:any;
+  d:any;
+  e:any;
+  f:any;
+  g:any;
+  h:any;
 
 
   constructor(private router: Router, private http: HttpClient) { }
@@ -32,6 +40,15 @@ export class VendoreditComponent implements OnInit {
     this.pincode = sessionStorage.getItem("pincode");
     this.country = sessionStorage.getItem("country");
     this.telephone = sessionStorage.getItem("telephone");
+    this.a=this.fname;
+    this.b=this.lname;
+    this.c=this.address;
+    this.d=this.city;
+    this.e=this.district;
+    this.f=this.pincode;
+    this.g=this.country;
+    this.h=this.telephone;
+    console.log(this.b);
   }
 
   update() {
@@ -53,6 +70,16 @@ export class VendoreditComponent implements OnInit {
       this.telephone = data['SOAP:Envelope']['SOAP:Body']['ns0:ZMM_VEN_DETAILS_UPDATE_AKR.Response'].TELEPHONE;
       // console.log(this.lname);
     })
+    console.log(this.b);
+    console.log(this.lname);
+    if(this.a==this.fname&&this.b==this.lname&&this.c==this.address&&this.d==this.city&&this.e==this.district
+      &&this.f==this.pincode&&this.g==this.country&&this.h==this.telephone){
+        alert("No Changes made"); 
+      }
+    else{
+      
+      alert("Changes saved successfully");
+    }
     this.router.navigate(['/profilev']);
   }
 

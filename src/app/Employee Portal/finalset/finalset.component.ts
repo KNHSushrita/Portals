@@ -71,12 +71,19 @@ export class FinalsetComponent implements OnInit {
           this.reqtype="DISPLAY";
           this.http.post('http://localhost:3000/final', { uname: this.uname,reqtype:this.reqtype }).subscribe((data:any) => {
             console.log(data);
+            this.ename = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['E_EMPLOYEEDETAILS'].ENAME._text;
+            // this.eid = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['E_EMPLOYEEDETAILS'].PENNR._text;
+            this.tel = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['E_EMPLOYEEDETAILS'].TELNR._text;
+            this.stree = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['E_EMPLOYEEDETAILS'].STRAS._text;
+            this.city = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['E_EMPLOYEEDETAILS'].ORT01._text;
+            this.count = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['E_EMPLOYEEDETAILS'].NATIO._text;
+
             this.ccode = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].COMP_CODE._text;
             this.cname = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].COMP_NAME._text;
             this.cityc = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].CITY._text;
             this.curr = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].CURRENCY._text;
             this.country= data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].COUNTRY._text;
-            this.lang = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].LANGU._text;
+            // this.lang = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['COMPANYDETAILS']['item'][1].LANGU._text;
             this.wdet = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['WAGETYPES']['item'];
             console.log(this.wdet);
             this.bas= data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response']['BASICPAY']['item'][1].EMPLOYEENO._text;
@@ -91,14 +98,14 @@ export class FinalsetComponent implements OnInit {
             this.tperiod = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_EMP_FINAL_SETTLEMENT_CHS.Response'].E_TENUREPERIOD._text;
             
           })
-          this.http.post('http://localhost:3000/eprofile', { uname: this.uname }).subscribe((data:any) => {
-      this.ename = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].ENAME._text;
-      console.log(this.ename);
-      this.eid = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].PERNR._text;
-      this.tel = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].TELNR._text;
-      this.stree= data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].STRAS._text;
-      this.city = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].ORT01._text;
-      this.count = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].NATIO._text;
+      this.http.post('http://localhost:3000/eprofile', { uname: this.uname }).subscribe((data:any) => {
+      // this.ename = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].ENAME._text;
+      // console.log(this.ename);
+      // this.eid = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].PERNR._text;
+      // this.tel = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].TELNR._text;
+      // this.stree= data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].STRAS._text;
+      // this.city = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].ORT01._text;
+      // this.count = data['SOAP:Envelope']['SOAP:Body']['ns0:ZHR_EMP_DETAILS_KNH.Response']['E_IT_OUTPUT'].NATIO._text;
   }
     )
 

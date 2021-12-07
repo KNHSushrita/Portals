@@ -8,18 +8,20 @@
                 <tr>
         
                   <th>Document No</th>
-                  <th>Item No</th>
+                  
                   <!-- <th>Material</th> -->
+                  <th > Name</th>
+                  <th>Item No</th>
                   <th>Short text</th>
                   <!-- <th>Document type</th> -->
                   <!-- <th>Document date</th> -->
                   <th>Required Quantity</th>
                   <!-- <th>Purchase Number</th> -->
-                  <!-- <th > Name</th> -->
+                  
                   <!-- <th>Exchange rate</th> -->
                   <!-- <th>Sold to</th> -->
                   <!-- <th> Delivery quantity</th> -->
-                  <!-- <th >Net price</th> -->
+                  <th >Net price</th>
                   <!-- <th>Division</th> -->
                   <!-- <th>Document status</th> -->
                 </tr>
@@ -27,19 +29,20 @@
               <tbody>
                 <tr *ngFor="let knhs of sales" style="background-color:  white;text-align: center;">
                   <td>{{+knhs.SD_DOC._text}}</td>
-                  <td>{{knhs.ITM_NUMBER._text}}</td>
+                  <td>{{knhs.NAME._text}}</td>
+                  <td>{{+knhs.ITM_NUMBER._text}}</td>
                   <!-- <td>{{+knhs.MATERIAL._text}}</td> -->
                   <td>{{knhs.SHORT_TEXT._text}}</td>
                   <!-- <td>{{knhs.DOC_TYPE._text}}</td> -->
                   <!-- <td>{{+knhs.DOC_DATE._text}}</td> -->
                   <td>{{knhs.REQ_QTY._text}}</td>
                   <!-- <td>{{knhs.PURCH_NO._text}}</td> -->
-                  <!-- <td>{{knhs.NAME._text}}</td> -->
+                  
                   <!-- <td>{{knhs.EXCHG_RATE._text}}</td> -->
                   <!-- <td>{{+knhs.SOLD_TO._text}}</td> -->
                   <!-- <td>{{+knhs.DLV_QTY._text}}</td> -->
                 
-                  <!-- <td>{{knhs.NET_PRICE._text}}</td> -->
+                  <td>{{knhs.NET_PRICE._text}}</td>
                   <!-- <td>{{knhs.DIVISION._text}}</td> -->
                   <!-- <td>{{knhs.DOC_STATUS._text}}</td> -->
                 </tr>

@@ -30,9 +30,9 @@ export class CreditdebitComponent implements OnInit {
      
      this.http.post('http://localhost:3000/creditdebit', { uname: this.uname }).subscribe((data:any) => {
        console.log(data);
-       this.credit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_CREDIT_DEBITKNH.Response']['IT_CREDIT']['item'];
+       this.credit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_CREDIT_DEBITKNH.Response']['IT_CREDIT']['item'].slice(1);
        //console.log(this.credit);
-       this. debit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_CREDIT_DEBITKNH.Response']['IT_DEBIT']['item'];
+       this. debit = data['SOAP:Envelope']['SOAP:Body']['ns0:ZFI_CREDIT_DEBITKNH.Response']['IT_DEBIT']['item'].slice(1);
        
      })
    }  

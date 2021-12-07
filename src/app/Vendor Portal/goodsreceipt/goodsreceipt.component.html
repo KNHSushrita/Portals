@@ -15,9 +15,9 @@
                   <thead style="background-color: rgb(5, 184, 255);" > 
                     <tr>
                       <th>Material Number</th>
-                  <th>Document Year</th>
+                  <!-- <th>Document Year</th> -->
                   <th>Username</th>
-                  <th>Document Date</th>
+                  <!-- <th>Document Date</th> -->
                   <!-- <th >Posting Date</th> -->
                   <th>Entry Date</th>
                   <th>Entry Time</th>
@@ -30,9 +30,9 @@
                   <tbody>
                     <tr *ngFor="let knhs of goodsh"(click)="showitem(knhs.MAT_DOC._text)" style="background-color: white;text-align: center;">
                     <td>{{knhs.MAT_DOC._text}}</td>
-                    <td>{{knhs.DOC_YEAR._text}}</td>
+                    <!-- <td>{{knhs.DOC_YEAR._text}}</td> -->
                     <td>{{knhs.USERNAME._text}}</td>
-                    <td>{{knhs.DOC_DATE._text}}</td>
+                    <!-- <td>{{knhs.DOC_DATE._text}}</td> -->
                     <!-- <td>{{knhs.PSTNG_DATE._text}}</td> -->
                     <td>{{knhs.ENTRY_DATE._text}}</td>
                     <td>{{knhs.ENTRY_TIME._text}}</td>
@@ -53,10 +53,10 @@
                   <thead style="background-color: rgb(5, 184, 255);" > 
                     <tr>
                       <th>Material Number</th>
-                      <!-- <th>Material</th> -->
+                      <th>Item No</th>
                       <!-- <th>Reference Doc Num</th> -->
                       
-                      <th>Material</th>
+                      <!-- <th>Material</th> -->
                       <th>Entry quantity</th>
                       <th >Purchase Number</th>
                       <th>Vendor</th>
@@ -72,8 +72,8 @@
                     <td>{{knhs.MAT_DOC._text}}</td>
                     <!-- <td>{{knhs.DOC_YEAR._text}}</td> -->
                     <!-- <td>{{knhs.REF_DOC_IT._text}}</td> -->
-                    <!-- <td>{{knhs.MATDOC_ITM._text}}</td> -->
-                    <td>{{+knhs.MATERIAL._text}}</td>
+                    <td>{{+knhs.MATDOC_ITM._text}}</td>
+                    <!-- <td>{{+knhs.MATERIAL._text}}</td> -->
                     <td>{{knhs.ENTRY_QNT._text}}</td>
                     <td>{{knhs.PO_NUMBER._text}}</td>
                     <td>{{knhs.VENDOR._text}}</td>

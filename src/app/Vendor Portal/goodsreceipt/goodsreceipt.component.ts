@@ -44,8 +44,9 @@ export class GoodsreceiptComponent implements OnInit {
      
      this.http.post('http://localhost:3000/goods', { uname: this.uname }).subscribe((data:any) => {
        console.log(data);
-       this.goodsh = data['SOAP:Envelope']['SOAP:Body']['ns0:ZMM_VENDOR_GOODS_RECEIPT_KNH.Response']['IT_GN_HEADER']['item'];
+       this.goodsh = data['SOAP:Envelope']['SOAP:Body']['ns0:ZMM_VENDOR_GOODS_RECEIPT_KNH.Response']['IT_GN_HEADER']['item'].slice(1);
        this.goodsi = data['SOAP:Envelope']['SOAP:Body']['ns0:ZMM_VENDOR_GOODS_RECEIPT_KNH.Response']['IT_GN_ITEMS']['item'];
+       this.goodsh.slice(1);
        this.loader=false;
      })
    }  
